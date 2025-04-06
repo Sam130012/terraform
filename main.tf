@@ -1,9 +1,9 @@
 provider "aws" {
-    region = "us-east-1"
+    region = var.region
 
 }
-sklkdslkd
-resource "aws_instance" "myterru"{
-    ami = "ami-084568db4383264d4"
-    instance_type  = "t2.micro"
+
+resource "aws_instance" "myinstave" {
+    ami = var.ami_id
+    instance_type = var.instance_type
 }
